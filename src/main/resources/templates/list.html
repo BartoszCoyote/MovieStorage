@@ -33,10 +33,16 @@
                 <thead>
                 <tr>
 
-                    <th>Name</th>
+                    <th>ID</th>
 
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Nazwa</th>
+                    <th>Typ</th>
+                    <th>Data</th>
+                    <th>Długość</th>
+                    <th>Ocena</th>
+                    <th>Oglądałem?</th>
+                    <th>Edytuj</th>
+                    <th>Usuń</th>
 
                 </tr>
                 </thead>
@@ -44,6 +50,12 @@
                 <tr th:each="movie,iterStat : ${movies}">
                     <td th:text="${iterStat.count}"></td>
                     <td th:text="${movie.name}"></td>
+                    <td th:text="${movie.type}"></td>
+                    <td th:text="${movie.date}"></td>
+                    <td th:text="${movie.length}"></td>
+                    <td th:text="${movie.rate}"></td>
+                    <td th:text="${movie.watch}"></td>
+
 
                     <td><a th:href="@{/movie/{id}/edit(id=${movie.id})}"><span
                             class="glyphicon glyphicon-pencil"></span></a></td>

@@ -13,9 +13,32 @@
                 <label>Name</label>
                 <input type="text" class="form-control"
                        th:field="*{name}" th:errorclass="field-error"/>
-
             </div>
-
+            <div class="form-group">
+                <label>Type</label>
+                <input type="text" class="form-control"
+                       th:field="*{type}" th:errorclass="field-error"/>
+            </div>
+            <div class="form-group">
+                <label>date</label>
+                <input type="text" class="form-control"
+                       th:field="*{date}" th:errorclass="field-error"/>
+            </div>
+            <div class="form-group">
+                <label>length</label>
+                <input type="text" class="form-control"
+                       th:field="*{length}" th:errorclass="field-error"/>
+            </div>
+            <div class="form-group">
+                <label>rate</label>
+                <input type="text" class="form-control"
+                       th:field="*{rate}" th:errorclass="field-error"/>
+            </div>
+            <div class="form-group">
+                <label>watch</label>
+                <input type="text" class="form-control"
+                       th:field="*{watch}" th:errorclass="field-error"/>
+            </div>
 
             <button type="submit" class="btn btn-primary">Save</button>
         </form>

@@ -3,10 +3,12 @@ package pl.jedynak.Domain;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.sql.Date;
 
 @Entity
+
+
 public class Movie implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -24,33 +26,33 @@ public class Movie implements Serializable {
     @Column(name = "type", nullable = false)
     private String type;
 
-    @NotEmpty
+    @NotNull
     @Column(name = "date", nullable = false)
-    private Date date;
+    private int date;
 
     @NotEmpty
     @Column(name = "length", nullable = false)
     private String length;
 
-    @NotEmpty
+    @NotNull
     @Column(name = "rate", nullable = false)
-    private Double rate;
+    private int rate;
 
-//    @NotEmpty
-//    @Column(name = "watch", nullable = false)
-//    private Boolean watch;
+    @NotEmpty
+    @Column(name = "watch", nullable = false)
+    private String watch;
 
     public Movie() {
         super();
     }
 
-    public Movie(String name, String type, Date date, String length, Double rate) {
+    public Movie(String name, String type, int date, String length, int rate, String watch) {
         this.name = name;
         this.type = type;
         this.date = date;
         this.length = length;
         this.rate = rate;
-        // this.watch = watch;
+        this.watch = watch;
     }
 
     public int getId() {
@@ -77,11 +79,11 @@ public class Movie implements Serializable {
         this.type = type;
     }
 
-    public Date getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
@@ -93,19 +95,19 @@ public class Movie implements Serializable {
         this.length = length;
     }
 
-    public Double getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(Double rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 
-//    public Boolean getWatch() {
-//        return watch;
-//    }
-//
-//    public void setWatch(Boolean watch) {
-//        this.watch = watch;
-//    }
+    public String getWatch() {
+        return watch;
+    }
+
+    public void setWatch(String watch) {
+        this.watch = watch;
+    }
 }
