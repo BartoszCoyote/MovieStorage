@@ -12,7 +12,7 @@
     </div>
 
     <th:block th:if="${#lists.isEmpty(movies)}">
-        <h3>No Movies</h3>
+        <h3 th:text="#{greeting.header}"></h3>
     </th:block>
 
     <th:block th:unless="${#lists.isEmpty(movies)}">
