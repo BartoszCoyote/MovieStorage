@@ -10,32 +10,32 @@
               method="POST" novalidate="novalidate">
             <input type="hidden" th:field="*{id}"/>
             <div class="form-group">
-                <label>Name</label>
+                <label th:text="#{name}"></label>
                 <input type="text" class="form-control"
                        th:field="*{name}" th:errorclass="field-error"/>
             </div>
             <div class="form-group">
-                <label>Type</label>
+                <label th:text="#{type}"></label>
                 <input type="text" class="form-control"
                        th:field="*{type}" th:errorclass="field-error"/>
             </div>
             <div class="form-group">
-                <label>date</label>
+                <label th:text="#{date}"></label>
                 <input type="text" class="form-control"
                        th:field="*{date}" th:errorclass="field-error"/>
             </div>
             <div class="form-group">
-                <label>length</label>
+                <label th:text="#{length}"></label>
                 <input type="text" class="form-control"
                        th:field="*{length}" th:errorclass="field-error"/>
             </div>
             <div class="form-group">
-                <label>rate</label>
+                <label th:text="#{rate}"></label>
                 <input type="text" class="form-control"
                        th:field="*{rate}" th:errorclass="field-error"/>
             </div>
             <div class="form-group">
-                <label>watch</label>
+                <label th:text="#{watch}"></label>
                 <input type="text" class="form-control"
                        th:field="*{watch}" th:errorclass="field-error"/>
             </div>
