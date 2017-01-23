@@ -20,45 +20,45 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @GetMapping("/movie")
+    @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("movies", movieService.findAll());
         return "list";
     }
 
-    @GetMapping("/movie/create")
+    @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("movie", new Movie());
         return "form";
     }
 
-    @GetMapping("/movie/{id}/edit")
+    @GetMapping("/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
         model.addAttribute("movie", movieService.findOne(id));
         return "form";
     }
 
-    @PostMapping("/movie/save")
+    @PostMapping("/save")
     public String save(@Valid Movie movie, BindingResult result, Model model, RedirectAttributes redirect) {
         if (result.hasErrors()) {
             return "form";
         }
         movieService.save(movie);
         redirect.addFlashAttribute("success", "Saved movie successfully!");
-        return "redirect:/movie";
+        return "redirect:/";
     }
 
-    @GetMapping("/movie/{id}/delete")
+    @GetMapping("/{id}/delete")
     public String delete(@PathVariable int id, RedirectAttributes redirect) {
         movieService.delete(id);
         redirect.addFlashAttribute("success", "Deleted movie successfully!");
-        return "redirect:/movie";
+        return "redirect:/";
     }
 
-    @GetMapping("/movie/search")
+    @GetMapping("/search")
     public String search(@RequestParam("q") String q, Model model) {
         if (q.equals("")) {
-            return "redirect:/movie";
+            return "redirect:/";
         }
 
         model.addAttribute("movies", movieService.search(q));

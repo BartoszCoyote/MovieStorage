@@ -17,10 +17,10 @@
 
     <th:block th:unless="${#lists.isEmpty(movies)}">
         <div class="row">
-            <a th:href="@{/movie/create}" class="btn btn-success pull-left">
+            <a th:href="@{/create}" class="btn btn-success pull-left">
                 <span class="glyphicon glyphicon-plus" th:text="#{add}"></span>
             </a>
-            <form class="form-inline pull-right" action="#" th:action="@{/movie/search}" method="GET">
+            <form class="form-inline pull-right" action="#" th:action="@{/search}" method="GET">
                 <div class="form-group">
                     <input type="text" class="form-control" name="q"
                            placeholder="..."/>
@@ -57,9 +57,9 @@
                     <td th:text="${movie.watch}"></td>
 
 
-                    <td><a th:href="@{/movie/{id}/edit(id=${movie.id})}"><span
+                    <td><a th:href="@{/{id}/edit(id=${movie.id})}"><span
                             class="glyphicon glyphicon-pencil"></span></a></td>
-                    <td><a th:href="@{/movie/{id}/delete(id=${movie.id})}"><span
+                    <td><a th:href="@{/{id}/delete(id=${movie.id})}"><span
                             class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
                 </tbody>

@@ -6,7 +6,7 @@
 
 <div class="container main-content form">
     <div class="row">
-        <form action="#" th:action="@{/movie/save}" th:object="${movie}"
+        <form action="#" th:action="@{/save}" th:object="${movie}"
               method="POST" novalidate="novalidate">
             <input type="hidden" th:field="*{id}"/>
             <div class="form-group">
