@@ -21,7 +21,7 @@
 }
 
 body {
-    background: url(".../images/cinema.jpg")
+    background: url(./static/images/cinema.jpg) no-repeat center center fixed;
 }
 
 .field-error {
