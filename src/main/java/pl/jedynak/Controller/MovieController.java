@@ -20,7 +20,7 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @GetMapping("/")
+    @GetMapping("/movie")
     public String index(Model model) {
         model.addAttribute("movies", movieService.findAll());
         return "list";
