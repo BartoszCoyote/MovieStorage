@@ -12,22 +12,20 @@
           rel="shortcut icon"/>
 
     <!-- Bootstrap -->
-    <link
-            href="../static/css/bootstrap.css"
-            th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
-            rel="stylesheet"/>
+    <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}"
+          rel="stylesheet"/>
     <!-- Custom style -->
     <link href="../static/css/style.css" th:href="@{/css/style.css}"
           rel="stylesheet"/>
 
 
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
-            th:src="@{/webjars/jquery/1.12.4/jquery.min.js}"></script>
+    <!--<script-->
+            <!--src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"-->
+            <!--th:src="@{/webjars/jquery/1.12.4/jquery.min.js}"></script>-->
 
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <!--<script-->
+            <!--src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"-->
+            <!--th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>-->
 
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -49,7 +47,7 @@
             </button>
             <a class="btn btn-large btn-success" th:href="@{?lang=en_US}">en</a>
             <a class="btn btn-large btn-success" th:href="@{?lang=pl_PL}">pl</a>
-            <a class="navbar-brand" th:href="@{/}">MovieStorage</a>
+            <a class="navbar-brand" th:href="@{/movie}">MovieStorage</a>
         </div>
     </div>
 </nav>

@@ -44,21 +44,21 @@ public class MovieController {
             return "form";
         }
         movieService.save(movie);
-        redirect.addFlashAttribute("success", "Saved movie successfully!");
-        return "redirect:/";
+
+        return "redirect:/movie";
     }
 
     @GetMapping("/{id}/delete")
     public String delete(@PathVariable int id, RedirectAttributes redirect) {
         movieService.delete(id);
-        redirect.addFlashAttribute("success", "Deleted movie successfully!");
-        return "redirect:/";
+
+        return "redirect:/movie";
     }
 
     @GetMapping("/search")
     public String search(@RequestParam("q") String q, Model model) {
         if (q.equals("")) {
-            return "redirect:/";
+            return "redirect:/movie";
         }
 
         model.addAttribute("movies", movieService.search(q));

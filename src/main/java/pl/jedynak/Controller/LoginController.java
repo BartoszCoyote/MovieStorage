@@ -61,11 +61,7 @@ public class LoginController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
-    public String home(Model model) {
-        model.addAttribute("movies", movieService.findAll());
-        return "list";
-    }
+
 
 
 }

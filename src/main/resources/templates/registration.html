@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -10,7 +10,9 @@
 </head>
 <body>
 <form th:action="@{/}" method="get">
-    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Login Page</button>
+    <a class="btn btn-large btn-success" th:href="@{?lang=en_US}">en</a>
+    <a class="btn btn-large btn-success" th:href="@{?lang=pl_PL}">pl</a>
+    <button class="btn btn-md btn-warning btn-block" type="Submit" th:text="#{login}">></button>
 </form>
 
 <div class="container">
@@ -19,7 +21,7 @@
             <form autocomplete="off" action="#" th:action="@{/registration}"
                   th:object="${user}" method="post" class="form-horizontal"
                   role="form">
-                <h2>Registration Form</h2>
+
                 <div class="form-group">
                     <div class="col-sm-9">
                         <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
@@ -56,7 +58,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <button type="submit" class="btn btn-primary btn-block">Register User</button>
+                        <button type="submit" class="btn btn-primary btn-block" th:text="#{register}"></button>
                     </div>
                 </div>
 
