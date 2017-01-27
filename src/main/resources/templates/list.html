@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head">
-    <script type="text/javascript" src="../static/css/jquery-latest.js"></script>
-    <script type="text/javascript" src="../static/css/jquery.tablesorter.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-                    $("#myTable").tablesorter();
-                }
-        );
-
-    </script>
+    <
 </head>
 <body>
 <nav th:replace="layout :: header"></nav>
@@ -86,3 +78,9 @@
 <footer th:replace="layout :: footer"></footer>
 </body>
 </html>
+<script type="text/javascript">
+    $(document).ready(function () {
+                $("#myTable").tablesorter();
+            }
+    );
+</script>
