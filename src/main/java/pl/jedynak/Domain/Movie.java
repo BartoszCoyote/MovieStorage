@@ -1,6 +1,8 @@
 package pl.jedynak.Domain;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -8,7 +10,7 @@ import java.io.Serializable;
 
 @Entity
 
-
+@EntityListeners(AuditingEntityListener.class)
 public class Movie implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -41,6 +43,11 @@ public class Movie implements Serializable {
     @NotEmpty
     @Column(name = "watch", nullable = false)
     private String watch;
+
+
+    @Column(name = "created_by_user", nullable = false)
+    @CreatedBy
+    private String createdByUser;
 
     public Movie() {
         super();
