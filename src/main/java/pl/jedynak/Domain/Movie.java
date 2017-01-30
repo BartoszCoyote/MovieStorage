@@ -47,7 +47,7 @@ public class Movie implements Serializable {
 
     @Column(name = "created_by_user", nullable = false)
     @CreatedBy
-    private String createdByUser;
+    public String createdByUser;
 
     public Movie() {
         super();

@@ -46,8 +46,10 @@
                     <th th:text="#{length}"></th>
                     <th th:text="#{rate}"></th>
                     <th th:text="#{watch}">?</th>
+                    <th th:text="#{watch}"></th>
                     <th th:text="#{edit}">Edytuj</th>
                     <th th:text="#{delete}">Usuń</th>
+
 
                 </tr>
                 </thead>
@@ -60,6 +62,7 @@
                     <td th:text="${movie.length}"></td>
                     <td th:text="${movie.rate}"></td>
                     <td th:text="${movie.watch}"></td>
+                    <td th:text="${movie.createdByUser}"></td>
 
 
                     <td><a th:href="@{/{id}/edit(id=${movie.id})}"><span
